@@ -10,12 +10,15 @@
 		D12FB19B2CC9BEA900929B3D /* SnapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12FB19A2CC9BEA900929B3D /* SnapsViewController.swift */; };
 		D12FB19D2CC9C44900929B3D /* ImagenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12FB19C2CC9C44900929B3D /* ImagenViewController.swift */; };
 		D12FB1A52CC9DD4300929B3D /* ElegirUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12FB1A42CC9DD4300929B3D /* ElegirUsuarioViewController.swift */; };
+		D17B21F82CCABBA4008DCCE2 /* registrarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17B21F72CCABBA4008DCCE2 /* registrarViewController.swift */; };
+		D17B21FA2CCABC9B008DCCE2 /* agregar-usuario.png in Resources */ = {isa = PBXBuildFile; fileRef = D17B21F92CCABC9B008DCCE2 /* agregar-usuario.png */; };
 		D1A0C8B52CC0813A00378FDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A0C8B42CC0813A00378FDF /* AppDelegate.swift */; };
 		D1A0C8B72CC0813A00378FDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A0C8B62CC0813A00378FDF /* SceneDelegate.swift */; };
 		D1A0C8B92CC0813A00378FDF /* iniciarSesionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A0C8B82CC0813A00378FDF /* iniciarSesionViewController.swift */; };
 		D1A0C8BC2CC0813A00378FDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A0C8BA2CC0813A00378FDF /* Main.storyboard */; };
 		D1A0C8BE2CC0813A00378FDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1A0C8BD2CC0813A00378FDF /* Assets.xcassets */; };
 		D1A0C8C12CC0813A00378FDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A0C8BF2CC0813A00378FDF /* LaunchScreen.storyboard */; };
+		D1C3AA5C2CCAA5DC0012FC1A /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C3AA5B2CCAA5DC0012FC1A /* Usuario.swift */; };
 		D1C999902CC094BE0039B938 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D1C9998F2CC094BE0039B938 /* FirebaseAnalytics */; };
 		D1C999922CC094BE0039B938 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = D1C999912CC094BE0039B938 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		D1C999942CC094BE0039B938 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D1C999932CC094BE0039B938 /* FirebaseAuth */; };
@@ -30,6 +33,8 @@
 		D12FB19A2CC9BEA900929B3D /* SnapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapsViewController.swift; sourceTree = "<group>"; };
 		D12FB19C2CC9C44900929B3D /* ImagenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagenViewController.swift; sourceTree = "<group>"; };
 		D12FB1A42CC9DD4300929B3D /* ElegirUsuarioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElegirUsuarioViewController.swift; sourceTree = "<group>"; };
+		D17B21F72CCABBA4008DCCE2 /* registrarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registrarViewController.swift; sourceTree = "<group>"; };
+		D17B21F92CCABC9B008DCCE2 /* agregar-usuario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "agregar-usuario.png"; sourceTree = "<group>"; };
 		D1A0C8B12CC0813A00378FDF /* Snapchat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snapchat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A0C8B42CC0813A00378FDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1A0C8B62CC0813A00378FDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +43,7 @@
 		D1A0C8BD2CC0813A00378FDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1A0C8C02CC0813A00378FDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1A0C8C22CC0813A00378FDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1C3AA5B2CCAA5DC0012FC1A /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		D1EA102F2CC2F17E00A03107 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,19 +84,38 @@
 		D1A0C8B32CC0813A00378FDF /* RibeyroSnapchat */ = {
 			isa = PBXGroup;
 			children = (
+				D1C3AA5A2CCAA5BE0012FC1A /* Modelos */,
+				D1C3AA592CCAA5840012FC1A /* ViewControllers */,
 				D1A0C8B42CC0813A00378FDF /* AppDelegate.swift */,
-				D12FB19C2CC9C44900929B3D /* ImagenViewController.swift */,
-				D12FB19A2CC9BEA900929B3D /* SnapsViewController.swift */,
 				D1A0C8B62CC0813A00378FDF /* SceneDelegate.swift */,
-				D1A0C8B82CC0813A00378FDF /* iniciarSesionViewController.swift */,
 				D1A0C8BA2CC0813A00378FDF /* Main.storyboard */,
 				D1A0C8BD2CC0813A00378FDF /* Assets.xcassets */,
+				D17B21F92CCABC9B008DCCE2 /* agregar-usuario.png */,
 				D1A0C8BF2CC0813A00378FDF /* LaunchScreen.storyboard */,
 				D1A0C8C22CC0813A00378FDF /* Info.plist */,
 				D1EA102F2CC2F17E00A03107 /* GoogleService-Info.plist */,
-				D12FB1A42CC9DD4300929B3D /* ElegirUsuarioViewController.swift */,
 			);
 			path = RibeyroSnapchat;
+			sourceTree = "<group>";
+		};
+		D1C3AA592CCAA5840012FC1A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D12FB19C2CC9C44900929B3D /* ImagenViewController.swift */,
+				D12FB19A2CC9BEA900929B3D /* SnapsViewController.swift */,
+				D1A0C8B82CC0813A00378FDF /* iniciarSesionViewController.swift */,
+				D12FB1A42CC9DD4300929B3D /* ElegirUsuarioViewController.swift */,
+				D17B21F72CCABBA4008DCCE2 /* registrarViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D1C3AA5A2CCAA5BE0012FC1A /* Modelos */ = {
+			isa = PBXGroup;
+			children = (
+				D1C3AA5B2CCAA5DC0012FC1A /* Usuario.swift */,
+			);
+			path = Modelos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +193,7 @@
 				D1EA10302CC2F17E00A03107 /* GoogleService-Info.plist in Resources */,
 				D1A0C8BE2CC0813A00378FDF /* Assets.xcassets in Resources */,
 				D1A0C8BC2CC0813A00378FDF /* Main.storyboard in Resources */,
+				D17B21FA2CCABC9B008DCCE2 /* agregar-usuario.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +206,8 @@
 			files = (
 				D12FB19B2CC9BEA900929B3D /* SnapsViewController.swift in Sources */,
 				D12FB19D2CC9C44900929B3D /* ImagenViewController.swift in Sources */,
+				D17B21F82CCABBA4008DCCE2 /* registrarViewController.swift in Sources */,
+				D1C3AA5C2CCAA5DC0012FC1A /* Usuario.swift in Sources */,
 				D1A0C8B92CC0813A00378FDF /* iniciarSesionViewController.swift in Sources */,
 				D1A0C8B52CC0813A00378FDF /* AppDelegate.swift in Sources */,
 				D1A0C8B72CC0813A00378FDF /* SceneDelegate.swift in Sources */,
