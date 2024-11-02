@@ -5,8 +5,10 @@ class ElegirUsuarioViewController: UIViewController, UITableViewDataSource, UITa
     
     @IBOutlet weak var listaUsuarios: UITableView!
     
-    // Arreglo de usuarios
     var usuarios: [Usuario] = []
+    var imagenURL = ""
+    var descrip = ""
+    var fromEmail = ""  // Email del remitente que envía el snap
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,32 +24,42 @@ class ElegirUsuarioViewController: UIViewController, UITableViewDataSource, UITa
             print(snapshot)
             
             // Extraer los datos del snapshot
-            if let usuarioData = snapshot.value as? [String: AnyObject] {
-                if let email = usuarioData["email"] as? String {
-                    // Crear el objeto Usuario
-                    let usuario = Usuario(email: email, uid: snapshot.key)
-                    
-                    // Agregar el usuario al arreglo
-                    self.usuarios.append(usuario)
-                    
-                    // Recargar los datos del TableView
-                    self.listaUsuarios.reloadData()
-                }
+            if let usuarioData = snapshot.value as? [String: AnyObject],
+               let email = usuarioData["email"] as? String {
+                // Crear el objeto Usuario
+                let usuario = Usuario(email: email, uid: snapshot.key)
+                
+                // Agregar el usuario al arreglo
+                self.usuarios.append(usuario)
+                
+                // Recargar los datos del TableView
+                self.listaUsuarios.reloadData()
             }
         })
     }
 
-    // Retorna el número de filas en la tabla
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return usuarios.count
     }
     
-    // Configura cada celda con el nombre de usuario
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "userCell")
         let usuario = usuarios[indexPath.row]
         cell.textLabel?.text = usuario.email
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let usuario = usuarios[indexPath.row]
+        
+        // Crear el snap con el email del remitente en "from"
+        let snap = [
+            "from": fromEmail,              // El email del remitente que envía el snap
+            "descripcion": descrip,         // La descripción del snap
+            "imagenURL": imagenURL          // URL de la imagen
+        ]
+        
+        // Guardar el snap en Firebase bajo el usuario seleccionado
+        Database.database().reference().child("usuarios").child(usuario.uid).child("snaps").childByAutoId().setValue(snap)
+    }
 }
-
